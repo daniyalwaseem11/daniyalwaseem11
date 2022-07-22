@@ -75,25 +75,22 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {};
+<script lang="ts">
+import { defineComponent } from "vue";
+export default defineComponent({});
 </script>
 
-
 <style scoped>
-.text_style
-{
-font-family: 'DM Sans';
-font-style: normal;
-font-weight: 700;
-font-size: 32px;
-line-height: 42px;
+.text_style {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 42px;
 
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 
-
-color: #222222;
+  color: #222222;
 }
 </style>

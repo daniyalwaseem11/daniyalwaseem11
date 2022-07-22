@@ -140,7 +140,7 @@
             </div>
             <div>
               <table class="table">
-                <thead >
+                <thead>
                   <tr class="">
                     <th class="text-left header-sticky">Name</th>
                     <th class="text-left">Calories</th>
@@ -152,8 +152,8 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr v-for="item in desserts" :key="item.name" >
-                    <td class="header-sticky" >{{ item.name }}</td>
+                  <tr v-for="item in desserts" :key="item.name">
+                    <td class="header-sticky">{{ item.name }}</td>
                     <td>{{ item.calories }}</td>
                     <td>{{ item.calories }}</td>
                     <td>{{ item.calories }}</td>
@@ -179,8 +179,10 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
   data() {
     return {
       yearlyActive: false,
@@ -216,5 +218,5 @@ export default {
       ],
     };
   },
-};
+});
 </script>

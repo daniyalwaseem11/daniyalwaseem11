@@ -298,9 +298,10 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from "vue";
 import CarouselComponet from "@/components/HomePage/Carousel.componet.vue";
-export default {
+export default defineComponent({
   components: { CarouselComponet },
   data() {
     return {
@@ -312,7 +313,7 @@ export default {
       this.CookieSection = false;
     },
   },
-};
+});
 </script>
 
 <style></style>

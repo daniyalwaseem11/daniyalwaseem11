@@ -63,8 +63,9 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from "vue";
+export default defineComponent({
   name: "ConfrimRegisterComponent",
   props: ["Dialog"],
   data: () => {
@@ -81,5 +82,5 @@ export default {
       this.$router.push("/");
     },
   },
-};
+});
 </script>

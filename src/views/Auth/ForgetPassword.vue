@@ -34,7 +34,12 @@
                       ><span class="text-white">Recover password</span></v-btn
                     >
                   </template>
-                  <v-card> <ConfirmEmailDialogComponent :Dialog="EmailConfrimdialog" @CloseModel="CloseModel"></ConfirmEmailDialogComponent> </v-card>
+                  <v-card>
+                    <ConfirmEmailDialogComponent
+                      :Dialog="EmailConfrimdialog"
+                      @CloseModel="CloseModel"
+                    ></ConfirmEmailDialogComponent>
+                  </v-card>
                 </v-dialog>
               </div>
             </div>
@@ -49,22 +54,22 @@
     </v-row>
   </div>
 </template>
-
-<script>
+<script lang="ts">
+import { defineComponent } from "vue";
 import ConfirmEmailDialogComponent from "../../components/accounts/ConfirmEmailDialog.component.vue";
-export default {
-    components:{
-        ConfirmEmailDialogComponent
-    },
+export default defineComponent({
+  components: {
+    ConfirmEmailDialogComponent,
+  },
   data() {
     return {
       EmailConfrimdialog: false,
     };
   },
-  methods:{
+  methods: {
     CloseModel() {
       this.EmailConfrimdialog = false;
     },
-  }
-};
+  },
+});
 </script>

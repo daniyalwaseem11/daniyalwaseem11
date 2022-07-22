@@ -52,11 +52,17 @@
                 </p>
               </div>
               <div>
-                <p class="confrimpassword_span">You will be redirected in 5 seconds, if you are not redirected click <br> on the following button</p>
+                <p class="confrimpassword_span">
+                  You will be redirected in 5 seconds, if you are not redirected
+                  click <br />
+                  on the following button
+                </p>
               </div>
 
               <div class="mt-11">
-                <v-btn color="#1884CD" block  @click="goToHome()"><p class="text-white ma-0">LOGIN</p></v-btn>
+                <v-btn color="#1884CD" block @click="goToHome()"
+                  ><p class="text-white ma-0">LOGIN</p></v-btn
+                >
               </div>
             </v-card>
           </div>
@@ -71,8 +77,9 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from "vue";
+export default defineComponent({
   data() {
     return {
       show1: false,
@@ -88,10 +95,9 @@ export default {
       this.FirstStep = false;
       this.LastStep = true;
     },
-    goToHome(){
-        this.$router.push('/'); 
-    }
+    goToHome() {
+      this.$router.push("/");
+    },
   },
-};
+});
 </script>
-

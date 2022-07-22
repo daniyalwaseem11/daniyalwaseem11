@@ -60,11 +60,12 @@
     </carousel> -->
   </div>
 </template>
-
-<script>
+<script lang="ts">
 // import "vue3-carousel/dist/carousel.css";
 // import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
-export default {
+import { defineComponent } from "vue";
+
+export default defineComponent({
   name: "CarouselComponent",
   // components: {
   //   Carousel,
@@ -106,5 +107,5 @@ export default {
       text: "I now understand the power of BodyTalk for healing the body, mind and spirit. I'm very fortunate to connect with certified BodyTalk practitioner Nancy Briggs. My 13-year-old son had severe depression and also an invasive anxiety has plagued him.",
     };
   },
-};
+});
 </script>

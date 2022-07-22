@@ -570,11 +570,10 @@
     </section>
   </div>
 </template>
-
-<script>
+<script lang="ts">
+import { defineComponent } from "vue";
 import EditTestimonail from "@/components/Testimonail/EditTestimonail.vue";
-
-export default {
+export default defineComponent({
   props: ["value"],
   components: {
     EditTestimonail,
@@ -602,7 +601,7 @@ export default {
       text: "I now understand the power of BodyTalk for healing the body, mind and spirit. I'm very fortunate to connect with certified BodyTalk practitioner Nancy Briggs. My 13-year-old son had severe depression and also an invasive anxiety has plagued him.",
     };
   },
-};
+});
 </script>
 
 <style scoped>

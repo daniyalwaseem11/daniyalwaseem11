@@ -156,12 +156,12 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from "vue";
 import ConfrimRegisterComponent from "../../components/Register/ConfrimRegister.component.vue";
 import LoginModel from "../../components/accounts/LoginModel.vue";
-
 // import Footer from "../Footer/Footer.vue";
-export default {
+export default defineComponent({
   name: "RegisterComponent",
   components: {
     ConfrimRegisterComponent,
@@ -182,5 +182,5 @@ export default {
       this.ConfrimRegisterdialog = false;
     },
   },
-};
+});
 </script>

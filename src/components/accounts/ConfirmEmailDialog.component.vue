@@ -59,8 +59,10 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
   name: "ConfirmEmailDialogComponent",
   props: ["Dialog"],
   data: () => {
@@ -77,5 +79,5 @@ export default {
       this.$router.push("/ConfirmPassword");
     },
   },
-};
+});
 </script>

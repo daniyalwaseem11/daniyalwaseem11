@@ -4,13 +4,12 @@
     <Footer />
   </div>
 </template>
-
-<script>
+<script lang="ts">
+import { defineComponent } from "vue";
 import Footer from "../Footer/Footer.vue";
-
-export default {
+export default defineComponent({
   components: {
     Footer,
   },
-};
+});
 </script>

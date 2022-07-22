@@ -1,5 +1,5 @@
 <template>
-  <v-dialog v-model="dialogbox" persistent>
+  <v-dialog v-model="isDialog" persistent>
     <v-card class="Login_Dialog">
       <div class="login-modal">
         <v-icon style="position: absolute; right: 6%" @click="CloseModel"
@@ -66,13 +66,14 @@ export default defineComponent({
   props: ["Dialog"],
   data() {
     return {
-      show1: false,
-      password: "",
-      dialogbox: false,
+      show1: false as boolean,
+      password: "" as string,
     };
   },
-  mounted() {
-    this.dialogbox = this.Dialog;
+  computed: {
+    isDialog(): boolean {
+      return this.Dialog;
+    },
   },
   methods: {
     GoToForgetPassword() {
