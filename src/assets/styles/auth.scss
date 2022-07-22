@@ -1,0 +1,190 @@
+.Register_backgroung_img{
+    background-image: url('../../../public/img/headers/auth-register.webp');
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+   
+    .content_container{
+        height: 100%;
+        background: #0035596e;
+        // opacity: 0.5;
+        .content{
+            height: 100%;
+            padding-left: 3rem;
+            padding-bottom: 5rem;
+            font-family: "Noto Serif";
+            font-size: 43px;
+            font-weight: 700;
+            line-height: 48px;
+            letter-spacing: 0em;
+            color: white;
+        }
+    }
+}
+.forgetpassword_backgroung_img{
+    background-image: url('../../../public/img/AuthImages/forgetpassword.png');
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+   
+    .content_container{
+        height: 100%;
+        background: #0035595d;
+        // opacity: 0.5;
+        .content{
+            height: 100%;
+            padding-left: 3rem;
+            padding-bottom: 5rem;
+            font-family: "Noto Serif";
+            font-size: 43px;
+            font-weight: 700;
+            line-height: 48px;
+            letter-spacing: 0em;
+            color: white;
+        }
+    }
+}
+a{
+    text-decoration: none;
+}
+.register_logo{
+    position: relative;
+    object-fit: none;
+}
+.register_logo_span{
+    font-family:"Noto Serif";
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+.register_form_style{
+    padding: 0 20%;
+
+    
+}
+.language_select{
+    border: none !important;
+    // border-top: 0;
+    // border-bottom: 1px solid red;
+    // border-left: 0;
+    // border-right: 0;
+    
+}
+.hover-linear {
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0px;
+      left: 0;
+      background-color: $color_primary_500;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform 0.3s;
+      border-radius: 100px;
+    }
+    &:hover {
+      &:after {
+        transform-origin: bottom left;
+        transform: scaleX(1);
+      }
+    }
+}
+.confrim_dialog_h1{
+    font-family:"DM Sans";
+    display: flex;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 31px;
+    letter-spacing: 0px;
+    text-align: center;
+    .p{
+        color: #2083C5;
+    }
+    ._h2{
+        font-weight: 400;
+    }
+}  
+.confrim_dialog_span{
+    font-family: "DM Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: rgba(34, 34, 34, 0.7);
+}
+span{
+    font-family: "DM Sans";
+    text-transform: capitalize;
+}
+.confrim_dialog_span2{
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #1884CD;
+
+}
+.confrim_dialog_end{
+    font-family: "Nunito";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.25px;
+    text-align: center;
+    color: rgba(32, 51, 137, 1);
+}
+.ConfrimRegisterDialoag{
+    width: min-content;
+    @include xs{
+        width: 100vw;
+    }
+}
+.ConfrimRegisterDialoag2{
+    width: 100%;
+    @include xs{
+        width: 100vw;
+    }
+}
+
+.ForgetPassword_h1{
+    font-family: "DM Sans";
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 44px;
+
+}
+.ForgetPassword_span_one{
+    font-family: "DM Sans";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19px;
+    color: rgba(34, 34, 34, 0.7);
+}
+.confrimpassword_h1{
+    font-family: "Nunito";
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 46px;
+    letter-spacing: 0.25px;
+    color:rgba(39, 174, 96, 1) ;
+
+}
+.confrimpassword_span{
+    font-family: "Nunito";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0.25px;
+    color: #777B8C;
+}

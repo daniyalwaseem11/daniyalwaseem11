@@ -1,0 +1,60 @@
+
+.carousel__prev, .carousel__next {
+    background-color: white !important;
+    color: black !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.slider_card{
+    height: auto;
+   
+    margin: 0 1rem;
+    margin-bottom:3rem ;
+}
+.carousel__pagination-button{
+    width: 1rem !important;
+    height: 1rem !important;
+    border-radius: 50% !important;
+    background-color: rgba(0, 53, 89, 0.58) !important;
+}
+.carousel__pagination-button--active {
+    background-color: black !important;
+}
+.carousel__pagination {
+    padding: 0;
+    margin-top: -1.3rem;
+}
+
+.index_test_h3{
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: rgba(0, 0, 0, 1);
+
+}
+.index_h8_text_style{
+    text-align: justify;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 14px;
+
+    color: #7A7A7A;
+}
+.index_h9_text_style{
+    text-align: justify;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 17px;
+    color: #363636;
+}
+.index_h1_text_style{
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-weight: 500;
+
+}

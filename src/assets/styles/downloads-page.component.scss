@@ -1,0 +1,164 @@
+//@import "./../../../../../assets/styles/vars";
+@import "./vars";
+.header {
+  position: relative;
+  overflow: hidden;
+  @include lt-md{
+    text-align: center;
+  }
+
+  // .container{
+  //   width: 1600px;
+  //   position: relative;
+  //   padding-bottom: 4em;
+  //   padding-left: 13em;
+  //   height: 379px;
+  //   @include lt-md{
+  //     padding-left: 1em;
+      
+  //   }
+  // }
+  // .container{
+
+  //   max-width: 100%;
+  //   margin: auto;
+  //   box-sizing: border-box;
+  //   padding: 2em;
+  //   /* padding-right: 13em; */
+  //   padding-left: 12em;
+  //   margin-left: 0;
+  //   @include lt-md{
+  //     padding-left: 1em;
+      
+  //   }
+  // }
+  
+  .columns{width:900px}
+  .left-column {float:left; width:900px; border:solid 1px black}
+  .white-background {
+
+    position: absolute;
+    top: 0;
+    right: 500px;
+    width: 400px;
+    height: 100%;
+    background: linear-gradient(to right, white, transparent);
+    z-index: 2;
+  }
+
+  .image-containerr {
+ 
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 900px;
+    max-width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    background-color: $color_primary_900;
+    @include lt-md{
+      border-radius: 0;
+      
+    }
+
+    img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include lt-md{
+        opacity: 0.25;
+      }
+    }
+
+  }
+  .texts {
+    width: 600px;
+    max-width: 100%;
+    position: relative;
+    z-index: 3;
+    @include lt-md {
+      order: 2;
+      text-align: center;
+       b,span{
+          color: white !important;
+        }
+        p,span{
+          color: white !important;
+        }
+
+    }
+  }
+
+  
+
+
+}
+
+// .downloads-page {
+//   .section-header {
+//     position: relative;
+//     overflow: hidden;
+//     min-height: 400px;
+//     display: flex;
+//     align-items: center;
+
+//     .white-background {
+//       position: absolute;
+//       top: 0;
+//       right: 500px;
+//       width: 400px;
+//       height: 100%;
+//       background: linear-gradient(to right, white, transparent);
+//       z-index: 2;
+//     }
+
+//     .image-containerr {
+//       position: absolute;
+//       top: 0;
+//       right: 0;
+//       height: 100%;
+//       width: 900px;
+//       max-width: 100%;
+//       z-index: 1;
+//       @include lt-md {
+//         height: 200px;
+//         order: 1;
+//         background-color: $color_primary_900;
+//         margin-bottom: 1em;
+//       }
+
+//       img {
+//         width: 100%;
+//         height: 100%;
+//         object-fit: cover;
+//         @include lt-md {
+//           opacity: 0.3;
+//         }
+//       }
+//     }
+
+//     .texts {
+//       width: 600px;
+//       max-width: 100%;
+//       position: relative;
+//       z-index: 3;
+//       @include lt-md {
+//         order: 2;
+//         text-align: center;
+//       }
+//     }
+//   }
+
+  
+//     .card-header{
+//         font-style: normal;
+//         font-weight: bold;
+//         font-size: 20px;
+//         line-height: 26px;
+//         color: #222222;
+//     }
+
+// }

@@ -1,0 +1,102 @@
+//@import "../../../assets/styles/vars";
+@import "./vars";
+
+.page-not-found {
+  overflow: hidden;
+
+  .header {
+    border-bottom: $borderLight;
+
+    .texts {
+     
+      width: 100%;
+      min-width: 220px;
+    }
+
+    .image {
+    
+      display: flex;
+      text-align: right;
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  .boxes {
+    margin: 3em 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include xs{
+      flex-direction: column;
+      margin: 3em 1em;
+    }
+
+    .box {
+      width: 32%;
+      @include xs{
+        width: 100%;
+        margin-bottom: 1em;
+      }
+
+      h2 {
+        font-family: $font_text !important;
+        margin: 0;
+        font-size: 1.2em;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5em;
+        mat-icon {
+          margin-right: 12px;
+        }
+      }
+
+      .link {
+        cursor: pointer;
+        mat-icon{
+          position: relative;
+          right: -6px;
+          top: 7px;
+          transition: $animation;
+        }
+        &:hover {
+          mat-icon{
+            right: -16px;
+          }
+          span{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .text_style
+{
+ font-family: 'DM Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 34px;
+line-height: 42px;
+}
+.style_etx
+{
+    font-family: 'DM Sans';
+font-style: normal;
+font-weight: 800;
+font-size: 19px;
+line-height: 21px;
+
+color: #222222;
+}
+.style_text_p
+{
+    font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+color: rgba(34, 34, 34, 0.7);
+
+}
+  }
+}

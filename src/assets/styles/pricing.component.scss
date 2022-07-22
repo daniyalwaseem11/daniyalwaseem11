@@ -1,0 +1,372 @@
+@import "./vars";
+
+.pricing-page {
+  position: relative;
+
+  .title-header {
+    margin-bottom: 80px;
+    padding: 0 16px;
+    text-align: center;
+    @include xs {
+      margin-bottom: 60px;
+      padding: 10px 16px;
+      background-color: white;
+    }
+  }
+  .header-sticky{
+    background-color: white;
+
+    /* Stick to the left */
+    left: 0;
+    position: sticky;
+
+    /* Displayed on top of other rows when scrolling */
+    z-index: 1;
+  }
+  .background-color {
+    background-color: $color_background;
+    width: 100%;
+    height: 900px;
+    position: absolute;
+    top: 400px;
+    left: 0;
+    z-index: -5;
+  }
+  .table>:not(:first-child){
+    border: 0px;
+  }
+  .table-container {
+    margin-bottom: 56px;
+    overflow: initial;
+    @include xs{
+      width: calc(100% + 2.4em);
+      margin-left: -1.2em;
+    }
+
+    .row {
+      display: flex;
+    }
+
+    .table {
+      box-shadow: $box_shadow_12;
+      border-radius: 40px;
+      padding-top: 24px;
+      background-color: white;
+      width: 100%;
+
+      @include lt-md {
+        overflow-x: auto;
+      }
+
+      .sticky-pricing-container {
+        position: sticky;
+        top: 60px;
+        @include lt-md {
+          min-width: 900px;
+          top: 0px;
+        }
+      }
+
+      .column {
+        width: 20%;
+      }
+
+      .column-first{
+        width: 40%;
+        min-width: 170px;
+      }
+
+      .plan-header {
+        text-align: center;
+        color: $black_medium_emphasis;
+        padding: 0 0.8em;
+        padding-bottom: 32px;
+
+        .title {
+          color: $black_high_emphasis;
+          font-size: 20px;
+          @include xs {
+            font-size: 18px;
+          }
+        }
+
+        .price {
+          color: $black_high_emphasis;
+          font-size: 40px;
+          height: 40px;
+          margin: 0;
+          display: flex;
+          font-weight: 600;
+          align-items: center;
+          justify-content: center;
+          line-height: 1;
+          font-family: $font_title !important;
+          @include xs {
+            font-size: 24px;
+          }
+        }
+        .price-small {
+          font-size: 32px;
+          @include xs {
+            font-size: 20px;
+          }
+        }
+
+        p {
+          small {
+            font-size: 12px;
+            @include xs {
+              font-size: 10px;
+            }
+          }
+        }
+
+        .animated{
+          @include xs{
+            margin: 0;
+          }
+        }
+
+        button {
+          margin-top: 24px;
+        }
+
+        .current-plan {
+          color: $color_success;
+          font-size: 12px;
+          font-weight: 600;
+          letter-spacing: 0.75px;
+          margin-top: 42px;
+        }
+      }
+
+      .plan-header-primary {
+        position: relative;
+
+        .title {
+          color: white !important;
+        }
+        .price {
+          color: white !important;
+        }
+        p {
+          small {
+            color: white !important;
+          }
+        }
+        button {
+          background-color: white !important;
+          color: $color_primary_500 !important;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: -50px;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          padding: 24px 0;
+          background-color: $color_primary_500;
+          border-radius: 12px;
+          z-index: -1;
+        }
+      }
+
+      .slide-toggle {
+        position: relative;
+        background-color: $color_background;
+        border-radius: 200px;
+        width: 100%;
+        margin: auto;
+        margin-bottom: 2em;
+
+        .boxes {
+          color: $black_medium_emphasis;
+          width: 50%;
+          height: 70px;
+          position: relative;
+          z-index: 2;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          cursor: pointer;
+          text-align: center;
+          border-radius: 200px;
+          &:hover {
+            color: $black_high_emphasis;
+          }
+        }
+        .box-active {
+          position: absolute;
+          width: 42%;
+          height: 50px;
+          top: 18px;
+          left: 5%;
+          right: 0;
+          z-index: 1;
+          background-color: white;
+          box-shadow: $box_shadow_12;
+          border-radius: 200px;
+        }
+        .yearly-active {
+          right: 0;
+          left: 53% !important;
+        }
+        .chip {
+          background-color: $color_accent_600;
+          color: white;
+          border-radius: 100px;
+          position: absolute;
+          bottom: -32px;
+          left: 50%;
+          padding: 0.3em 1em;
+          white-space: nowrap;
+          font-size: 0.8em;
+          transform: translateX(-50%);
+          -o-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          -webkit-transform: translateX(-50%);
+        }
+      }
+
+      table {
+        width: 100%;
+        padding: 24px 40px;
+        border-radius: 40px;
+
+        @include xs {
+          min-width: 900px;
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        .mat-row {
+          height: 64px;
+          &:hover {
+            background-color: $color_background;
+          }
+        }
+
+        .mat-cell {
+          width: 100%;
+          min-width: 138px;
+          text-align: center;
+          border-color: $color_primary_50;
+          color: $black_medium_emphasis;
+          letter-spacing: 0.5px;
+
+          @include xs {
+            font-size: 12px;
+          }
+        }
+
+        .mat-column-benefit {
+          text-align: left;
+          min-width: 160px;
+        }
+
+        .check-icon {
+          color: $color_success;
+          background-color: rgba($color: $color_success_hover, $alpha: 0.1);
+          border-radius: 200px;
+          padding: 6px;
+        }
+
+        .close-icon {
+          color: $black_medium_emphasis;
+          background-color: rgba($color: $black_medium_emphasis, $alpha: 0.1);
+          border-radius: 200px;
+          padding: 6px;
+        }
+      }
+    }
+
+    .sticky-pricing {
+      .sticky-pricing-container {
+        @include gt-sm {
+          background-color: white;
+          border-radius: 20px;
+          z-index: 2;
+          box-shadow: $box_shadow_12;
+          top: 0px;
+          padding: 0 40px;
+          /* padding-top: 24px; */
+          z-index: 20000000;
+        }
+      }
+
+      .plan-header {
+        @include gt-sm {
+          .title {
+            margin-bottom: 0;
+          }
+          .price {
+            font-size: 1.4em;
+            font-weight: 600;
+            height: 40px;
+          }
+          .price-small {
+            font-size: 1.4em;
+          }
+          p {
+            small {
+              display: none;
+            }
+          }
+          button {
+            margin-top: 0;
+          }
+          .current-plan {
+            margin-top: 20px;
+          }
+          &::before {
+            top: -32px;
+          }
+        }
+      }
+    }
+  }
+
+  .faqs {
+    text-align: center;
+    padding: 60px 0;
+
+    .accordion {
+      text-align: left;
+      margin-top: 60px;
+
+      &::ng-deep .mat-expansion-panel {
+        box-shadow: none !important;
+
+        mat-expansion-panel-header {
+          height: 90px !important;
+          box-shadow: none !important;
+          border-top: $borderLight;
+          line-height: 1.4;
+          @include xs {
+            height: initial !important;
+            padding-top: 16px;
+            padding-bottom: 16px;
+          }
+
+          mat-panel-title {
+            font-size: 16px;
+            color: $black_high_emphasis;
+            font-weight: 500;
+            letter-spacing: 0.15px;
+          }
+        }
+      }
+
+      &::ng-deep .mat-expanded {
+        mat-expansion-panel-header {
+          mat-panel-title {
+            color: $color_primary_500 !important;
+          }
+        }
+      }
+    }
+  }
+}

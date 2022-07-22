@@ -1,0 +1,76 @@
+.company_bg{
+    background-image: url("/public/img/AuthImages/company.png");
+    background-size: 100% 100%;
+}
+.company_banner_h1{
+    font-family: "Lora";
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    @include lt-md {
+        font-size: 30px;
+    }
+    @include mobile {
+        font-size: 26px;
+    }
+}
+.company_banner_span{
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-weight: 400;
+}
+.company_h2{
+    font-family: "Lora";
+    font-size: 38px;
+    font-weight: 500;
+}
+.founder_h1{
+    font-family: "Lora";
+    font-size: 26px;
+    font-weight: 700;
+    color: #0071BD;
+    &.underline{
+        text-decoration: underline;
+    }
+}
+.founder_span{
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-weight: 700;
+
+}
+.location_span{
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-weight: 400;
+
+}
+.company_bg_section{
+    background-color: $color_background;
+}
+.company_h3{
+    font-family: "Noto Serif";
+    font-size: 36px;
+    font-weight: 400;
+
+}
+.company_span{
+    font-family: "DM Sans";
+    font-size: 18px;
+
+}
+.span_blue{
+    color: #0071BD;
+    font-weight: 700;
+}
+.mobile_banner{
+    display: none;
+}
+@media screen and (max-width:430px) {
+    .destop_banner{
+        display: none;
+    }
+    .mobile_banner{
+        display: block;
+    }
+}
