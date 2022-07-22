@@ -3,7 +3,7 @@
     <div>
       <div class="d-flex justify-space-between">
         <v-tabs
-          v-model="tab"
+          v-model="tabs"
           background-color="transparent"
           slider-color="#EAA413"
           right
@@ -14,7 +14,6 @@
 
         <v-btn
           variant="text"
-          icon="mdi-close"
           size="small"
           class="mr-2 pa-1"
           @click="close"
@@ -22,8 +21,8 @@
       </div>
       <v-divider class="pa-0 ma-0"></v-divider>
     </div>
-    <v-card-text class="mt-3 mb-3">
-      <v-window v-model="tab">
+    <!-- <v-card-text class="mt-3 mb-3">
+      <v-window v-model="tabs">
         <v-window-item value="one">
           <v-row class="d-flex justify-space-around">
             <v-col cols="12" md="3">
@@ -173,7 +172,7 @@
           </v-row>
         </v-window-item>
       </v-window>
-    </v-card-text>
+    </v-card-text> -->
   </v-card>
 </template>
 
@@ -183,9 +182,11 @@ import { defineComponent } from "vue";
 export default defineComponent({
   name: "LanguageComponent",
   props: ["languagecomponent"],
-  data: () => ({
-    tab: null,
-  }),
+  data() {
+    return {
+      tabs: null,
+    };
+  },
   methods: {
     close() {
       this.$emit("close");

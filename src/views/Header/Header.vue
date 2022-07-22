@@ -359,7 +359,7 @@
             </div>
           </div>
 
-          <div>
+          <div class="header-btns">
             <v-btn depressed color="white">English</v-btn>
             <v-btn depressed color="white">USD</v-btn>
             <v-btn color="primary" @click="openLogin()" depressed
@@ -742,6 +742,10 @@
       </nav>
       <!------------------mobile navigation bar end----------------------------------------->
     </div>
+    <!-- <LanguageComponent
+      :languagecomponent="true"
+      @close="close()"
+    ></LanguageComponent> -->
     <LoginModel :Dialog="loginDialoag" @CloseModel="CloseModel"></LoginModel>
   </div>
 </template>
@@ -750,6 +754,7 @@
 import { defineComponent } from "vue";
 
 import LoginModel from "../../components/accounts/LoginModel.vue";
+import LanguageComponent from "../../components/HomePage/Language.component.vue";
 export default defineComponent({
   components: { LoginModel },
   name: "Header",

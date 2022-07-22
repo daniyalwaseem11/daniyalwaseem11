@@ -12,8 +12,13 @@
         background: #ECF1F2;
         padding: 0.5rem 2.2rem;
         width: 60%;
+        border-radius: 7px;
      }
    }
+}
+.header-btns{
+  display: flex;
+  gap: 1rem;
 }
 .search{
   position: relative;
