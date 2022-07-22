@@ -2,10 +2,370 @@
   <div>
     <div class="main-layout">
       <nav class="toolbar">
-        <div class="container mb-2">
-          <a class="logo" >
-            <img :src="logo" alt="BodyTalk" />
-          </a>
+        <div class="container my-4">
+          <div class="nav_left">
+            <a class="logo">
+              <img :src="logo" alt="BodyTalk" />
+            </a>
+            <div class="nav_links">
+              <div class="search">
+                <input type="text" placeholder="Search" />
+                <v-icon class="search-icon">search</v-icon>
+              </div>
+
+              <div>
+                <v-menu
+                  transition="scroll-y-transition"
+                  offset-y
+                  color="transparent"
+                >
+                  <template v-slot:activator="{ on, attr }">
+                    <v-btn
+                      color="transparent"
+                      variant="flat"
+                      v-bind="attr"
+                      v-on="on"
+                      depressed
+                      class="text mr-1"
+                    >
+                      <span class="text"> Practitioners</span
+                      ><v-icon style="font-size: x-large; color: #595459"
+                        >mdi-menu-down</v-icon
+                      >
+                    </v-btn>
+                  </template>
+                  <v-list class="mt-1" color="white">
+                    <v-list-item class="text pa-3 px-3" link
+                      >Find a b c Certified Practitioner
+                    </v-list-item>
+                    <v-list-item class="text pa-3 px-3" link
+                      >Find Animal Practitioners
+                    </v-list-item>
+                    <v-list-item class="text pa-3 px-3" link
+                      >Find Advances Practitioners
+                    </v-list-item>
+                    <v-list-item class="text pa-3 px-3" link
+                      >Find PaRama Practitioners
+                    </v-list-item>
+                    <v-list-item class="text pa-3 px-3" link
+                      >Find Instructors
+                    </v-list-item>
+                    <v-list-item class="text pa-3 px-3" link
+                      >Read more about....
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+                <v-menu
+                  transition="scroll-y-transition"
+                  offset-y
+                  color="transparent"
+                >
+                  <template v-slot:activator="{ on, attr }">
+                    <v-btn
+                      color="transparent"
+                      variant="flat"
+                      v-bind="attr"
+                      v-on="on"
+                      depressed
+                      class="text mr-1"
+                    >
+                      <span class="text">Courses</span
+                      ><v-icon style="font-size: x-large; color: #595459">
+                        mdi-menu-down</v-icon
+                      >
+                    </v-btn>
+                  </template>
+                  <v-list class="mt-1" color="white">
+                    <v-list-item class="text pa-3 px-3" link
+                      >Find a Live Course
+                    </v-list-item>
+                    <v-list-item class="text pa-3 px-3" link
+                      >Find a Self-Study Course
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+                <v-menu
+                  transition="scroll-y-transition"
+                  offset-y
+                  color="transparent"
+                >
+                  <template v-slot:activator="{ on, attr }">
+                    <v-btn
+                      color="transparent"
+                      variant="flat"
+                      v-bind="attr"
+                      v-on="on"
+                      depressed
+                      class="text mr-1"
+                    >
+                      <span class="text"> Careers</span
+                      ><v-icon style="font-size: x-large; color: #595459">
+                        mdi-menu-down</v-icon
+                      >
+                    </v-btn>
+                  </template>
+                  <v-list class="mt-1" color="white">
+                    <v-list-item class="text pa-3 px-3" link
+                      >Become a Practitioner
+                    </v-list-item>
+                    <v-list-item class="text pa-3 px-3" link
+                      >Become an Instructor Non-Profit-Work
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+                <v-menu
+                  transition="scroll-y-transition"
+                  offset-y
+                  color="transparent"
+                >
+                  <template v-slot:activator="{ on, attr }">
+                    <v-btn
+                      color="transparent"
+                      variant="flat"
+                      v-bind="attr"
+                      v-on="on"
+                      depressed
+                      class="text mr-1"
+                    >
+                      <span class="text">Learn more </span
+                      ><v-icon style="font-size: x-large; color: #595459">
+                        mdi-menu-down</v-icon
+                      >
+                    </v-btn>
+                  </template>
+
+                  <v-list class="mt-1" color="white">
+                    <router-link to="/company">
+                      <v-list-item class="text pa-3 px-3" link
+                        >IBA
+                      </v-list-item></router-link
+                    >
+                    <router-link to="/testimonial">
+                      <v-list-item class="text pa-3 px-3" link
+                        >Testimonials
+                      </v-list-item></router-link
+                    >
+                    <v-menu transition="scale-transition" origin=" right top ">
+                      <template v-slot:activator="{ props }">
+                        <v-list-item class="text py-3 pl-3" link v-bind="props">
+                          <div class="d-flex justify-space-between">
+                            Our Modalities
+                            <v-icon class="ml-14">mdi-menu-right</v-icon>
+                          </div>
+                        </v-list-item>
+                      </template>
+                      <v-list class="Our_Modalities_style">
+                        <v-list-item class="px-0">
+                          <v-btn
+                            height="auto"
+                            class="py-2 d-flex justify-start"
+                            variant="text"
+                            block
+                          >
+                            <div class="d-flex justify-start">
+                              <div
+                                class="d-flex align-center justify-space-between"
+                              >
+                                <div><img src="img/navbar/5.png" /></div>
+                                <div class="ml-5">
+                                  <div>
+                                    <span class="Our_Modalities_style_h1"
+                                      >BodyTalk</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </v-btn>
+                        </v-list-item>
+                        <v-list-item class="px-0">
+                          <v-btn
+                            height="auto"
+                            class="py-2 d-flex justify-start"
+                            variant="text"
+                            block
+                          >
+                            <div class="d-flex align-center">
+                              <div><img src="img/navbar/4.png" /></div>
+                              <div class="ml-5">
+                                <div>
+                                  <span class="Our_Modalities_style_h1"
+                                    >FreeFall</span
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </v-btn>
+                        </v-list-item>
+                        <v-list-item class="px-0">
+                          <v-btn
+                            height="auto"
+                            class="py-2 d-flex justify-start"
+                            variant="text"
+                            block
+                          >
+                            <div class="d-flex align-center">
+                              <div><img src="img/navbar/3.png" /></div>
+                              <div class="ml-5">
+                                <div>
+                                  <span class="Our_Modalities_style_h1"
+                                    >IBA</span
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </v-btn>
+                        </v-list-item>
+                        <v-list-item class="px-0">
+                          <v-btn
+                            height="auto"
+                            class="py-2 d-flex justify-start"
+                            variant="text"
+                            block
+                          >
+                            <div class="d-flex align-center">
+                              <div>
+                                <img src="img/navbar/BreakThroughLogo.png" />
+                              </div>
+                              <div class="ml-5">
+                                <div>
+                                  <span class="Our_Modalities_style_h1"
+                                    >BreakThrough
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </v-btn>
+                        </v-list-item>
+                        <v-list-item class="px-0">
+                          <v-btn
+                            height="auto"
+                            class="py-2 d-flex justify-start"
+                            variant="text"
+                            block
+                          >
+                            <div class="d-flex align-center">
+                              <div><img src="img/navbar/2.png" /></div>
+                              <div class="ml-5">
+                                <div>
+                                  <span class="Our_Modalities_style_h1"
+                                    >BodyTalk for Animal
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </v-btn>
+                        </v-list-item>
+                        <v-list-item class="px-0">
+                          <v-btn
+                            height="auto"
+                            class="py-2 d-flex justify-start"
+                            variant="text"
+                            block
+                          >
+                            <div class="d-flex align-center">
+                              <div><img src="img/navbar/1.png" /></div>
+                              <div class="ml-5">
+                                <div>
+                                  <span class="Our_Modalities_style_h1"
+                                    >MindScape
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </v-btn>
+                        </v-list-item>
+                      </v-list>
+                    </v-menu>
+                    <router-link to="/membership">
+                      <v-list-item class="text pa-3 px-3" link
+                        >Membership
+                      </v-list-item></router-link
+                    >
+                    <v-list-item class="text pa-3 px-3" link>Blog </v-list-item>
+                    <v-list-item class="text pa-3 px-3" link
+                      >Media / Video
+                    </v-list-item>
+                    <v-list-item class="text pa-3 px-3" link
+                      >Resources
+                    </v-list-item>
+                    <v-list-item class="text pa-3 px-3" link>FAQ </v-list-item>
+                    <v-list-item class="text pa-3 px-3" link
+                      >Foundation
+                    </v-list-item>
+                    <v-list-item class="text pa-3 px-3" link
+                      >Contact Us
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+
+                <v-menu
+                  transition="scroll-y-transition"
+                  offset-y
+                  color="transparent"
+                >
+                  <template v-slot:activator="{ on, attr }">
+                    <v-btn
+                      color="transparent"
+                      variant="flat"
+                      depressed
+                      v-bind="attr"
+                      v-on="on"
+                      class="mr-1"
+                    >
+                      <span class="text"> Store</span
+                      ><v-icon style="font-size: x-large; color: #595459">
+                        mdi-menu-down</v-icon
+                      >
+                    </v-btn>
+                  </template>
+                  <v-list class="mt-1" color="white">
+                    <v-list-item class="text pa-3 px-3" link
+                      >Self-Study Courses Books
+                    </v-list-item>
+                    <v-list-item class="text pa-3 px-3" link
+                      >All Products
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+                <v-menu
+                  transition="scroll-y-transition"
+                  offset-y
+                  color="transparent"
+                >
+                  <template v-slot:activator="{ on, attr }">
+                    <v-btn
+                      color="transparent"
+                      variant="flat"
+                      v-bind="attr"
+                      v-on="on"
+                      class="text"
+                      depressed
+                    >
+                      <span class="text">Forum</span
+                      ><v-icon style="font-size: x-large; color: #595459">
+                        mdi-menu-down</v-icon
+                      >
+                    </v-btn>
+                  </template>
+
+                  <v-list class="mt-1" color="white">
+                    <v-list-item class="text pa-3 px-3" link
+                      >Go to Forum
+                    </v-list-item>
+                  </v-list>
+                </v-menu>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <v-btn depressed color="white">English</v-btn>
+            <v-btn depressed color="white">USD</v-btn>
+            <v-btn color="primary" @click="openLogin()" depressed
+              >Sign In</v-btn
+            >
+          </div>
         </div>
       </nav>
       <!------------------mobile navigation bar start----------------------------------------->
@@ -81,8 +441,8 @@
                 class="text mr-1"
               >
                 <span class="text"> Practitioners</span
-                ><v-icon style="font-size: x-large; color: #595459">
-                  mdi-menu-down</v-icon
+                ><v-icon style="font-size: x-large; color: #595459"
+                  >mdi-menu-down</v-icon
                 >
               </v-btn>
             </template>

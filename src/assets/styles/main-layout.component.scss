@@ -68,8 +68,9 @@ $toolbar_height: 56px;
       padding-bottom: 1em;
       margin: auto;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       box-sizing: border-box;
+      justify-content: space-between;
 
       .rows {
         width: 100%;
